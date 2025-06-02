@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¿Buscas productos estéticos innovadores y efectivos? ¡Descubre nuestra selección de productos de última generación y mejora tu rutina de belleza!">
+    <title>Carrito de compras | Beauty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+    </style>
+    <script defer src="../tienda.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../img/BEAUTY.png" alt="logo de página de centro de estética llamado Beauty">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../tienda.html">TIENDA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SERVICIOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">POSTULATE</a>
+                </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Carrito de compras</h1>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-carrito">
+                </tbody>
+            </table>
+            <h3 class="text-end">Total: $<span id="total-carrito">0</span></h3>
+            <button id="vaciar-carrito" class="btn mt-3">Vaciar carrito</button>
+            
+            <a href="/tienda.html" class="btn  volver">←  Volver a la tienda <img src="../img/tienda.png"></a>
+        </div>
+    </main>
+    <nav>
+        <a href="https://whatsapp.com" target="_blank"> <img src="../img/whatsapp.png" class="logo-whatsapp" alt="logo de whatsapp"></a>
+    </nav>
+    <footer>
+        <section class="redes">
+        <p>SEGUINOS EN NUESTRAS REDES</p>
+        <ul>
+            <li>
+                <a href="http://instagram.com" target="_blank"><img src="../img/instagram.png" alt="logo de instagram">
+                </a>
+                </li>
+            <li>
+                <a href="http://facebook.com" target="_blank">
+                    <img src="../img/facebook.png" alt="logo de facebook">
+                </a>
+            </li>
+            <li>
+                <a href="http://tiktok.com" target="_blank">
+                    <img src="../img/tik-tok.png" alt="logo de tiktok">
+                </a>
+            </li>
+        </ul>
+    </section>
+    </footer>
+</body>
+</html>

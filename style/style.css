@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+    background-color: whitesmoke;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+header{
+    background-color: #fed1cd;
+    height: 200px;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    padding-top: 25px;
+    width: auto;
+    height: 70%;
+}
+h1{
+    color: #243b4a;
+    text-align: center;
+    padding-top: 20px;
+}
+.navbar{
+    color: #fed1cd;
+}
+p{
+    color: #243b4a;
+    display: flex;
+    text-align: center;
+    margin: 1px;
+}
+nav a{
+    color: #5e4855;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-top: 20%;
+}
+nav li{
+    display: inline;
+    margin-right: 20px;
+}
+nav a{
+    text-decoration: none;
+    margin-top: 10%;
+    font-size: 20px;   
+}
+.producto{
+    background-color:#ffe7e6ef;
+    border-color: #fed1cd;
+}
+.comprar{
+    background-color: #806375;
+    color: #fed1cd;
+}
+
+.tienda{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 15px;
+    justify-content: center;
+    align-items: stretch;
+}
+.tienda p{
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.tienda img{
+    width: 400px;
+    padding: 20px;
+}
+.producto{
+    box-shadow: #806375 4px 4px 4px;
+    border-radius: 10px;
+    margin:40px;   
+}
+a{
+    text-decoration: none;
+}
+.comprar{
+    border: none;
+    border-radius: 10px;
+    padding: 6px 8px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.comprar:hover{
+    background-color: #fed1cd;
+    color:#806375;
+    border: 1px solid #806375;
+    cursor: pointer;
+}
+.btn{
+    background-color: #806364;
+    color: #fed1cd;
+    border: none;
+    border-radius: 10px;
+    padding: 4px 8px;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: #5e4855;
+    color: #fed1cd;
+    border: 1px solid #806375;
+}
+a .comprar{
+    text-decoration: none;
+    display:flex;
+    align-items:center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#carrito-info {
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    padding: 2px 10px;
+    border: 2px solid #806375;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 8px  #806375;
+    z-index: 999;
+    display: flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 80px;
+    padding-bottom: 15px;
+}
+#carrito-info p {
+    padding-top: 12px;
+    margin: 5px 0;
+    color: #243b4a;
+    font-size: 20px;
+}
+
+#panel-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:#f9f9f9;
+    color: #243b4a;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    font-family: 'Quicksand', sans-serif;
+}
+#panel-flotante.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+footer{
+    background-color: #fed1cd;
+    margin-bottom: 0;
+    height: 100%;
+    margin-top: 60px;
+}
+footer ul p{
+    padding-top: 20px;
+    font-weight: 700;
+}
+.logo-whatsapp{
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+footer li{
+    list-style: none;
+    justify-items:stretch;
+    background-color:#fed1cd;
+}
+footer ul{
+    background-color: #fed1cd;
+    margin-bottom: 0;
+}
+footer img{
+    width: 40px;
+    height: 40px;
+}
+.redes{
+    display: block;
+    justify-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    background-color: #fed1cd;
+    padding-bottom: 20px;
+}
+.redes li{
+    display: inline;
+    padding-right: 10px;
+}
+.redes ul{
+    padding-top: 10px;
+}
+table {
+    margin-top: 20px;
+}
+.volver {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tienda {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+}
