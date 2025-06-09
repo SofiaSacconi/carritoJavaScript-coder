@@ -1,12 +1,3 @@
-let nombreUsuario = localStorage.getItem("nombreUsuario");
-if (!nombreUsuario) {
-    nombreUsuario = prompt("Hola, ¿Cuál es tu nombre?");
-    if (nombreUsuario) {
-        localStorage.setItem("nombreUsuario", nombreUsuario);
-        alert(`¡Bienvenid@ ${nombreUsuario} a la tienda de Beauty!`);
-    }
-};
-
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const cantidadProductos = document.getElementById("cantidad");
 const totalElemento = document.getElementById("total");
