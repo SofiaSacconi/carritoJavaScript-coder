@@ -85,3 +85,168 @@ if (tabla && totalCarritoTabla) {
     });
 };
 
+// const registroForm = document.getElementById("registroForm");
+
+// if (registroForm) {
+//     registroForm.addEventListener("submit", function (e) {
+//         e.preventDefault();
+
+//         const usuario = document.getElementById("usuario").value;
+//         const email = document.getElementById("email").value;
+//         const password = document.getElementById("password").value;
+
+//         const usuarioData = {
+//             usuario,
+//             email,
+//             password
+//         };
+
+//         localStorage.setItem("usuarioData", JSON.stringify(usuarioData));
+
+//         alert("Registro exitoso. Ahora puedes iniciar sesión.");
+//         window.location.href = "login.html";
+//     });
+// };
+
+// const login = document.getElementById("loginForm");
+
+// login.addEventListener("submit", function (e) {
+//     e.preventDefault();
+
+//     const usuarioLogin = document.getElementById("usuarioLogin").value;
+//     const passwordLogin = document.getElementById("passwordLogin").value;
+
+//     const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioData"));
+
+//     if (
+//         usuarioGuardado && usuarioLogin === usuarioGuardado.usuario && passwordLogin === usuarioGuardado.password
+//     ) {
+//         alert("Inicio de sesión exitoso.");
+//         window.location.href = "finalizar-compra.html";
+//     } else {
+//         alert("Usuario o contraseña incorrectos.")
+//     }
+// });
+
+const registroForm = document.getElementById("registroForm");
+
+if (registroForm) {
+    registroForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const usuario = document.getElementById("usuario").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const usuarioData = {
+            usuario,
+            email,
+            password
+        };
+
+        localStorage.setItem("usuarioData", JSON.stringify(usuarioData));
+
+        Toastify({
+            text: "Registro exitoso. Ahora puedes iniciar sesión.",
+            duration: 3000,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "#4CAF50",
+            stopOnFocus: true
+        }).showToast();
+
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 3000); // espera a que se vea el toast
+    });
+}
+
+const login = document.getElementById("loginForm");
+
+if (login) {
+    login.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const usuarioLogin = document.getElementById("usuarioLogin").value;
+        const passwordLogin = document.getElementById("passwordLogin").value;
+
+        const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioData"));
+
+        if (
+            usuarioGuardado && usuarioLogin === usuarioGuardado.usuario && passwordLogin === usuarioGuardado.password
+        ) {
+            Toastify({
+                text: "Inicio de sesión exitoso.",
+                duration: 2500,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                style:{
+                    borderRadius: "10px",
+                },
+                stopOnFocus: true,
+            }).showToast();
+
+            setTimeout(() => {
+                window.location.href = "finalizar-compra.html";
+            }, 1500);
+        } else {
+            Toastify({
+                text: "Usuario o contraseña incorrectos.",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "linear-gradient(to right, #f85032, #e73827)",
+                style:{
+                    borderRadius: "10px",
+                },
+                stopOnFocus: true
+            }).showToast();
+        }
+    });
+}
+
+if (tabla && totalCarritoTabla) {
+    let total = 0;
+    carrito.forEach(producto => {
+        const fila = document.createElement("tr");
+
+        const tdNombre = document.createElement("td");
+        tdNombre.textContent = producto.nombre;
+
+        const tdPrecio = document.createElement("td");
+        tdPrecio.textContent = producto.precio.toLocaleString("es-AR", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        });
+
+        fila.appendChild(tdNombre);
+        fila.appendChild(tdPrecio);
+        tabla.appendChild(fila);
+
+        total += producto.precio;
+    });
+    totalCarritoTabla.textContent = total.toLocaleString("es-AR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    });
+}
+
+const form = document.getElementById("formularioCompra");
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    Toastify({
+                text: "Compra exitosa (simulación)",
+                duration: 3000,
+                gravity: "top",
+                position: "center",
+                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                style:{
+                    borderRadius: "10px",
+                },
+                stopOnFocus: true,
+            }).showToast();
+    setTimeout(() => {
+                window.location.href = "index.html";
+            }, 3000);
+});

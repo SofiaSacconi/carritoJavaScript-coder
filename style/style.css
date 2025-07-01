@@ -19,7 +19,7 @@ header{
 header img{
     padding-top: 25px;
     width: auto;
-    height: 70%;
+    margin-right: 30px;
 }
 h1{
     color: #243b4a;
@@ -50,7 +50,7 @@ nav li{
 }
 nav a{
     text-decoration: none;
-    margin-top: 10%;
+    margin-top: 50px;
     font-size: 20px;   
 }
 .producto{
@@ -235,4 +235,196 @@ table {
         align-items: center;
         margin-top: 10px;
     }
+}
+
+.banner-container {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #806375;
+    border: none;
+    color: #fed1cd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.overlay button:hover {
+    background-color: #806364;
+}
+.inicio{
+    margin-left: 150px;
+}
+
+form#loginForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 400px;
+    align-items: stretch;
+}
+div form#loginForm {
+    display: flex;
+    align-content: center;
+}
+form#registroForm {
+    background-color: #ffe7e6ef;
+    border: 2px solid #fed1cd;
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    margin: 40px auto;          
+    box-shadow: 0 4px 8px rgba(128, 99, 117, 0.2); 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+}
+form#loginForm input {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
+}
+form#loginForm {
+    background-color: #ffe7e6ef;
+    border: 2px solid #fed1cd;
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    margin: 40px auto;          
+    box-shadow: 0 4px 8px rgba(128, 99, 117, 0.2); 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+}
+form#registroForm input {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+/* Estilo específico para finalizar compra */
+
+#formulario-pago {
+    background-color: #ffe7e6ef;
+    border: 2px solid #fed1cd;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(128, 99, 117, 0.2);
+}
+
+#formulario-pago h2 {
+    text-align: center;
+    color: #243b4a;
+    margin-bottom: 20px;
+}
+
+#formulario-pago label {
+    font-weight: 500;
+    color: #243b4a;
+}
+
+#formulario-pago input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+}
+
+#formulario-pago button {
+    background-color: #806375;
+    color: #fed1cd;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#formulario-pago button:hover {
+    background-color: #5e4855;
+    color: #fed1cd;
+}
+
+#resumen-carrito {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(128, 99, 117, 0.2);
+}
+
+#resumen-carrito h2 {
+    text-align: center;
+    color: #243b4a;
+    margin-bottom: 20px;
+}
+
+#resumen-carrito table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resumen-carrito table td, 
+#resumen-carrito table th {
+    border: 1px solid #fed1cd;
+    padding: 10px;
+    text-align: left;
+    font-family: "Quicksand", sans-serif;
+}
+
+#resumen-carrito table th {
+    background-color: #ffe7e6ef;
+    color: #243b4a;
+}
+
+#resumen-carrito p {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 20px;
 }
