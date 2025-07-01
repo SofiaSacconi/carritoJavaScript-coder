@@ -85,48 +85,6 @@ if (tabla && totalCarritoTabla) {
     });
 };
 
-// const registroForm = document.getElementById("registroForm");
-
-// if (registroForm) {
-//     registroForm.addEventListener("submit", function (e) {
-//         e.preventDefault();
-
-//         const usuario = document.getElementById("usuario").value;
-//         const email = document.getElementById("email").value;
-//         const password = document.getElementById("password").value;
-
-//         const usuarioData = {
-//             usuario,
-//             email,
-//             password
-//         };
-
-//         localStorage.setItem("usuarioData", JSON.stringify(usuarioData));
-
-//         alert("Registro exitoso. Ahora puedes iniciar sesión.");
-//         window.location.href = "login.html";
-//     });
-// };
-
-// const login = document.getElementById("loginForm");
-
-// login.addEventListener("submit", function (e) {
-//     e.preventDefault();
-
-//     const usuarioLogin = document.getElementById("usuarioLogin").value;
-//     const passwordLogin = document.getElementById("passwordLogin").value;
-
-//     const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioData"));
-
-//     if (
-//         usuarioGuardado && usuarioLogin === usuarioGuardado.usuario && passwordLogin === usuarioGuardado.password
-//     ) {
-//         alert("Inicio de sesión exitoso.");
-//         window.location.href = "finalizar-compra.html";
-//     } else {
-//         alert("Usuario o contraseña incorrectos.")
-//     }
-// });
 
 const registroForm = document.getElementById("registroForm");
 
@@ -150,8 +108,11 @@ if (registroForm) {
             text: "Registro exitoso. Ahora puedes iniciar sesión.",
             duration: 3000,
             gravity: "top",
-            position: "right",
-            backgroundColor: "#4CAF50",
+            position: "center",
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            style:{
+                borderRadius: "10px",
+            },
             stopOnFocus: true
         }).showToast();
 
