@@ -428,3 +428,7 @@ form#registroForm input {
     font-size: 18px;
     margin-top: 20px;
 }
+
+#nombre{
+    text-transform: uppercase;
+}

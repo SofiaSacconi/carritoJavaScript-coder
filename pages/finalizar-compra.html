@@ -49,10 +49,10 @@
             <h2>Datos de la Tarjeta</h2>
             <form id="formularioCompra">
                 <label for="nombre">Nombre del titular</label><br>
-                <input type="text" id="nombre" required><br><br>
+                <input type="text" id="nombre" minlength="3" pattern="^[a-zA-Z]+$" required><br><br>
 
                 <label for="numero">Número de tarjeta</label><br>
-                <input type="text" id="numero" maxlength="16" pattern="\d{16}" placeholder="1234 5678 9012 3456" required><br><br>
+                <input type="text" id="numero" maxlength="16" pattern="\d{16}" placeholder="1111 2222 3333 4444" required><br><br>
 
                 <label for="vencimiento">Fecha de vencimiento</label><br>
                 <input type="month" id="vencimiento" required><br><br>
