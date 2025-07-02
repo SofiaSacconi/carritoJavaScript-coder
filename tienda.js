@@ -18,6 +18,7 @@ function actualizarLocalStorage() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+//Mostrar panel cada vez que se sume un producto al carrito
 function mostrarPanelFlotante() {
     const panel = document.getElementById("panel-flotante");
     if (!panel) return;
@@ -25,11 +26,13 @@ function mostrarPanelFlotante() {
     setTimeout(() => panel.classList.remove("mostrar"), 2000);
 }
 
+//Cantidad de productos agregados en el carrito
 function actualizarResumenCarrito() {
     if (!cantidadProductos) return;
     cantidadProductos.textContent = carrito.length;
 }
 
+ //Eliminar todos los productos del carrito
 function vaciarCarrito() {
     carrito.length = 0;
     actualizarLocalStorage();
@@ -38,6 +41,7 @@ function vaciarCarrito() {
     if (totalCarritoTabla) totalCarritoTabla.textContent = "0.00";
 }
 
+//Agregar pruductos al carrito
 const botones = document.querySelectorAll(".comprar");
 if (botones.length > 0) {
     botones.forEach(boton => {
@@ -51,7 +55,6 @@ if (botones.length > 0) {
     });
 }
 
-
 const btnVaciar = document.getElementById("vaciar-carrito");
 if (btnVaciar) {
     btnVaciar.addEventListener("click", vaciarCarrito);
@@ -59,6 +62,7 @@ if (btnVaciar) {
 
 actualizarResumenCarrito();
 
+//Carrito con detalles y precios de productos
 if (tabla && totalCarritoTabla) {
     let total = 0;
     carrito.forEach(producto => {
@@ -85,7 +89,7 @@ if (tabla && totalCarritoTabla) {
     });
 };
 
-
+//Registrarse 
 const registroForm = document.getElementById("registroForm");
 
 if (registroForm) {
@@ -122,6 +126,7 @@ if (registroForm) {
     });
 }
 
+//Iniciar sesión
 const login = document.getElementById("loginForm");
 
 if (login) {
@@ -167,6 +172,7 @@ if (login) {
     });
 }
 
+//Resumen de compra
 if (tabla && totalCarritoTabla) {
     let total = 0;
     carrito.forEach(producto => {
@@ -193,6 +199,7 @@ if (tabla && totalCarritoTabla) {
     });
 }
 
+//Formulario para finalizar compra
 const form = document.getElementById("formularioCompra");
 form.addEventListener("submit", function(e) {
     e.preventDefault();
